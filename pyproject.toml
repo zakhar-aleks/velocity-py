@@ -1,0 +1,49 @@
+[project]
+name = "create-py-app"
+version = "0.1.0"
+description = "Project generated with create-py-app"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "questionary>=2.1.1",
+    "rich>=14.2.0",
+    "typer>=0.21.0",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B"]
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.ty]
+# Ty defaults
+
+[tool.poe.tasks]
+start = "python main.py"
+lint  = "ruff check . --fix"
+check = "ty check"
+check-all = { shell = "ruff check . --fix && ty check && python main.py", help = "Lint, check types, and run app" }
+dev = "watchfiles 'uv run poe check-all' ."
+
+[tool.uv.workspace]
+members = [
+    "my-py-appproject",
+    "my-py-app",
+    "flask-project",
+    "project",
+]
+
+[dependency-groups]
+dev = [
+    "poethepoet>=0.39.0",
+    "ruff>=0.14.10",
+    "ty>=0.0.8",
+    "watchfiles>=1.1.1",
+]
+
