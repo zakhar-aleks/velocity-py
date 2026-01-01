@@ -1,46 +1,38 @@
-# Create Py App ⚡️
+# Create Py App
 
-The fastest way to scaffold a strictly typed, modern Python project. 
+A high-performance scaffolding tool for strictly typed, modern Python projects.
 
-Think of this as **"Vite for Python"**. It sets up a high-performance toolchain (**uv**, **Ruff**, **Ty**) with zero configuration, so you can stop fighting `pyproject.toml` and start coding.
+Designed as a streamlined solution for initializing Python applications, this tool establishes a robust toolchain using **uv**, **Ruff**, and **Ty** with zero manual configuration. It eliminates the need to manage `pyproject.toml` boilerplate, allowing developers to focus on implementation immediately.
 
-## 🚀 Features
+## Features
 
-* **Instant Setup:** Scaffolds a project in milliseconds.
-* **Modern Stack:** Pre-configured with [Astral's](https://astral.sh) high-performance tools (`uv`, `ruff`, `ty`).
-* **Strict by Default:** Enforces type safety and clean code from line one.
-* **Hot Reloading:** Includes a `dev` server that lints, type-checks, and restarts your app on every save.
-* **Interactive CLI:** A beautiful, easy-to-use interface for selecting your tools.
+* **Rapid Initialization:** Scaffolds complete project structures in milliseconds.
+* **Modern Toolchain:** Comes pre-configured with high-performance tools from Astral (`uv`, `ruff`, `ty`).
+* **Strict Type Safety:** Enforces type checking and code quality standards by default.
+* **Integrated Development Environment:** Includes a development server with hot-reloading that automatically lints and type-checks code upon saving.
+* **Interactive CLI:** Features a streamlined command-line interface for customized tool selection.
 
-## 📦 Installation
+## Installation and Usage
 
-### Via Homebrew (macOS & Linux)
-The easiest way to install is via my custom tap:
+This tool is designed to be executed directly via `uvx` (the command-line tool runner included with `uv`). This method ensures you always run the latest version without requiring a permanent global installation.
 
+### Prerequisites
+
+Ensure that `uv` is installed on your system.
+For intallation guides refer to https://docs.astral.sh/uv/
+
+## Creating a Project
+
+To scaffold a new project, execute the following command in your terminal:
+
+**macOS/Linux:**
 ```bash
-brew tap zakhar-aleks/tap
-brew install create-py-app
+uvx create-py-app
 ```
 
-### Windows (via WSL)
+**Windows:**
+```powershell
+uvx create-py-app
+```
 
-The recommended way to use this tool on Windows is via **WSL (Windows Subsystem for Linux)**.
-
-1.  **Install Homebrew:**
-    Paste this into your Ubuntu terminal to install the package manager:
-    ```bash
-    /bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))"
-    ```
-
-2.  **Add to Path:**
-    Run these commands to activate Homebrew:
-    ```bash
-    (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/$USER/.bashrc
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-    ```
-
-3.  **Install the Tool:**
-    ```bash
-    brew tap zakhar-aleks/tap
-    brew install create-py-app
-    ```
+This command will download and execute the tool in an isolated environment and guide you through the setup process interactively.
