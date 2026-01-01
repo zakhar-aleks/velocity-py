@@ -1,4 +1,4 @@
-# Create Py App
+# Velocity Py
 
 A high-performance scaffolding tool for strictly typed, modern Python projects.
 
@@ -27,12 +27,12 @@ To scaffold a new project, execute the following command in your terminal:
 
 **macOS/Linux:**
 ```bash
-uvx create-py-app
+uvx velocity-py
 ```
 
 **Windows:**
 ```powershell
-uvx create-py-app
+uvx velocity-py
 ```
 
 This command will download and execute the tool in an isolated environment and guide you through the setup process interactively.

@@ -1,5 +1,5 @@
 [project]
-name = "create-py-app"
+name = "velocity-py"
 version = "0.2.0"
 description = "A high-performance scaffolding tool for strictly typed Python projects."
 readme = "README.md"
