@@ -1,6 +1,6 @@
 [project]
 name = "velocity-py"
-version = "0.2.0"
+version = "0.2.4"
 description = "A high-performance scaffolding tool for strictly typed Python projects."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -14,14 +14,14 @@ authors = [
 ]
 
 [project.scripts]
-create-py-app = "create_py_app.main:app"
+velocity-py = "velocity_py.main:app"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.hatch.build.targets.wheel]
-packages = ["create_py_app"]
+[tool.hatch.build]
+include = ["velocity_py"]
 
 [dependency-groups]
 dev = [
@@ -32,7 +32,7 @@ dev = [
 
 [tool.ruff]
 line-length = 88
-target-version = "py9"
+target-version = "py39"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "N", "UP", "B"]
